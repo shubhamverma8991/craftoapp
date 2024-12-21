@@ -13,7 +13,7 @@ export const uploadImage = (file) => {
 };
 
 export const createQuote = (text, mediaUrl, token) =>
-  axios.post(`${API_BASE_URL}/postQuote`, { text, mediaUrl }, { headers: { Authorization: `Bearer ${token}` } });
+  axios.post(`${API_BASE_URL}/postQuote`, { text, mediaUrl }, { headers: { Authorization: `${token}` } });
 
 export const getQuotes = (limit, offset, token) =>
   axios.get(`${API_BASE_URL}/getQuotes`, {
