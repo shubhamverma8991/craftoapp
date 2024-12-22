@@ -14,7 +14,9 @@ const QuoteCreationPage = () => {
     try {
       await createQuote(text, mediaUrl, token);
       toast.success("Quote created successfully!");
-      navigate("/quotes");
+      setTimeout(() => {
+        navigate("/quotes");
+      }, 500);
     } catch (error) {
       toast.error("Failed to create quote");
       console.error(error);
@@ -27,7 +29,7 @@ const QuoteCreationPage = () => {
       const uploadResponse = await uploadImage(selectedFile);
       const url = uploadResponse.data[0].url;
       setMediaUrl(url);
-      toast.success("Image uploaded successfully!");
+      if (url) toast.info("Image uploaded, Submit the Quote");
     }
   };
 
