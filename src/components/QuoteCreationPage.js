@@ -60,6 +60,7 @@ const QuoteCreationPage = () => {
           <label className="block text-lg font-medium text-gray-700 mb-3">Upload Image</label>
           <input
             type="file"
+            accept="image/*"
             onChange={handleFileChange}
             className="w-full p-3 border border-gray-300 rounded-2xl bg-white shadow-sm focus:ring-4 focus:ring-indigo-300 focus:outline-none cursor-pointer"
           />
