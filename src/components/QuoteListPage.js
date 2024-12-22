@@ -62,8 +62,7 @@ const QuoteListPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Responsive Header */}
-      <div className="border-b bg-gray-100 py-4 px-6 shadow-md relative flex items-center justify-center sm:justify-between w-5/6 m-auto mt-4 rounded-full">
+      <div className="border-b bg-gray-100 py-4 px-6 shadow-md relative flex items-center justify-center sm:justify-between w-full lg:w-5/6 m-auto mt-4 rounded-full">
         <div className="flex-1 flex justify-center">
           <h2 className="text-3xl font-extrabold tracking-wide">Quotes</h2>
         </div>
@@ -74,13 +73,11 @@ const QuoteListPage = () => {
           Logout
         </button>
 
-        {/* Mobile Menu Button */}
         <button className="absolute right-6 sm:hidden" onClick={() => setShowMenu(!showMenu)}>
           <FaBars className="text-2xl" />
         </button>
       </div>
 
-      {/* Mobile Menu (Visible on Toggle) */}
       {showMenu && (
         <div className="sm:hidden flex flex-col bg-gray-100 px-6 py-4">
           <button onClick={handleLogout} className="bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-lg">
@@ -89,7 +86,6 @@ const QuoteListPage = () => {
         </div>
       )}
 
-      {/* Quotes Grid */}
       <div className="max-w-7xl mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 cursor-pointer">
         {quotes.map((quote, index) => (
           <div
